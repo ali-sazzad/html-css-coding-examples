@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Animation</title>
+    <style>
+        body {
+            animation: animateBody 3s linear infinite;
+            background-image: linear-gradient(90deg, #00234e, #2b57009a, #5e4e00ba, #592b0098, #660900);
+        }
+        @keyframes animateBody {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .text-animation {
+            background-image: linear-gradient(90deg, #ff0000, #ff7b00, #ffd500, #80ff00, #0073ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: animate 5s linear infinite;
+            background-size: 200% 200%; 
+            /* Ensuring the gradient covers the text area */
+
+            font-size: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 200px;
+            font-weight: bold;
+        }
+        @keyframes animate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-animation">
+        Animated Text
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Border Button</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+        .button {
+            margin: 80px 250px;
+            padding: 25px 60px;
+            background-color: transparent;
+            color: #fffd80;
+            border: 3px solid transparent;
+            border-image: linear-gradient(to right, #ff9d00, #00c3ff);
+            border-image-slice: 1;
+            border-radius: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background: linear-gradient(to right, #5e3a00, #00455b);
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <button class="button">
+        Hover Me
+    </button>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 80px auto 1fr auto 50px;
+            grid-template-columns: 1fr 4fr 1fr;
+            height: 100vh;
+            grid-template-areas: 
+                "header         header          header"
+                "left-aside     banner          right-aside"
+                "left-aside     main            right-aside"
+                "left-aside     lower-content   right-aside"
+                "footer         footer          footer";
+            grid-gap: 10px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .header {
+            grid-area: header;
+            background: maroon;
+        }
+        .left-aside {
+            grid-area: left-aside;
+            background: #804400;
+        }
+        .banner {
+            grid-area: banner;
+            background: #158000;
+        }
+        .right-aside {
+            grid-area: right-aside;
+            background: #005c80;
+        }
+        .main {
+            grid-area: main;
+            background: #020080;
+        }
+        .lower-content {
+            grid-area: lower-content;
+            background: #635f00;
+        }
+        .footer {
+            grid-area: footer;
+            background: #410033;
+        }
+
+        .header, .left-aside, .banner, .right-aside, .main, .lower-content, .footer {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        @media (max-width: 678px) {
+            .container {
+                grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header"
+                    "banner"
+                    "left-aside"
+                    "main"
+                    "right-aside"
+                    "lower-content"
+                    "footer";
+            }            
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Header
+        </div>
+        <div class="left-aside">
+            Left Aside
+        </div>
+        <div class="banner">
+            Banner
+        </div>
+        <dvi class="right-aside">
+            Right Aside
+        </dvi>
+        <div class="main">
+            Main
+        </div>
+        <div class="lower-content">
+            Lower Content
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>
