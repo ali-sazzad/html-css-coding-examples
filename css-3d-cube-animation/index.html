@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Cube Animation</title>
     <style>
+
+        
         body {
             display: flex;
             justify-content: center;
@@ -18,12 +20,21 @@
             transform-style: preserve-3d;
             animation: rotate 5s infinite linear;
         }
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 75px;
+            font-weight: 800;
+            color: #000000;
+        }
         .face {
             position: absolute;
             width: 200px;
             height: 200px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid #ccc;
+            background: rgb(234, 234, 234);
+            border: 3px solid #e1ff00;
         }
         .front { transform: translateZ(100px); }
         .back { transform: rotateY(180deg) translateZ(100px); }
@@ -39,12 +50,12 @@
 </head>
 <body>
     <div class="cube">
-        <div class="face front"></div>
-        <div class="face back"></div>
-        <div class="face left"></div>
-        <div class="face right"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
+        <div class="face front text">1</div>
+        <div class="face back text">2</div>
+        <div class="face left text">3</div>
+        <div class="face right text">4</div>
+        <div class="face top text">5</div>
+        <div class="face bottom text">6</div>
     </div>
 </body>
 </html>
